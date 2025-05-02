@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #87CEEB; /* Celeste cielo */
+    font-family: 'Arial', sans-serif;
+    color: #001f3f; /* Azul marino oscuro */
+    margin: 0;
+    overflow: hidden; /* Evitar scrollbars */
+}
+
+.game-container {
+    text-align: center;
+}
+
+canvas {
+    border: 3px solid #005f73; /* Azul más oscuro */
+    background-color: #0077b6; /* Azul océano */
+    /* Opcional: Fondo */
+    /* background-image: url('/images/background.png'); */
+    /* background-size: cover; */
+    display: block; /* Evitar espacio extra debajo */
+    margin: 0 auto; /* Centrar canvas si el contenedor es más ancho */
+    max-width: 100%; /* Hacerlo responsive */
+}
+
+#score, #instructions {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.message-box {
+    background-color: #ade8f4; /* Azul claro */
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #005f73;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.message-box h2 {
+    margin-top: 0;
+    color: #00354e;
+}
+
+.message-box button {
+     padding: 10px 25px;
+     font-size: 1em;
+     cursor: pointer;
+     background-color: #0077b6;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     margin-top: 15px;
+}
+
+.message-box button:hover {
+    background-color: #005f73;
+}
+
+.hidden {
+    display: none;
+}

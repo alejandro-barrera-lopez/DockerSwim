@@ -1,0 +1,25 @@
+# Nombre de la aplicación
+app_name: "whale-runner"
+
+# Versión de Python (ajusta si usas otra)
+python_version: "3.10"
+
+# Archivo de requisitos
+requirements_file: "requirements.txt"
+
+# Puerto en el que Gunicorn escuchará DENTRO del contenedor
+port: 5001
+
+# Comando para iniciar la aplicación con Gunicorn
+start_command:
+  - "gunicorn"
+  - "app:app"         # archivo_python:variable_flask
+  - "--bind"
+  - "0.0.0.0:5001"    # Escuchar en todas las interfaces en el puerto especificado
+  - "--log-level"     # Nivel de log para Gunicorn (opcional)
+  - "info"
+  - "--preload"       # Precargar app (opcional, puede mejorar rendimiento)
+
+# No necesitamos volúmenes ni variables de entorno especiales para este juego simple
+# volumes: []
+# environment_variables: {}
