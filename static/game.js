@@ -25,13 +25,13 @@ const WHALE_HEIGHT = 50;
 // Obstáculos
 const OBSTACLE_WIDTH = 60; // Un poco más ancho para más presencia
 const OBSTACLE_MIN_HEIGHT = 40;
-const OBSTACLE_MAX_HEIGHT = 180; // Permitir obstáculos más altos
+const OBSTACLE_MAX_HEIGHT = 110; // Permitir obstáculos más altos
 const OBSTACLE_GAP_PAIR = 130; // Espacio para la ballena en el par clásico
 const OBSTACLE_COLOR = '#2c6e49'; // Un color para los obstáculos si no se usa imagen
 
 // Dinámica del Juego
 const GRAVITY = 0.35; // Ajuste ligero
-const JUMP_STRENGTH = -6.5; // Ajuste ligero
+const JUMP_STRENGTH = -4.5; // Ajuste ligero
 const INITIAL_GAME_SPEED = 2.5; // Ligeramente más lento al inicio
 const MAX_GAME_SPEED = 7; // Velocidad máxima
 const SPAWN_INTERVAL_INITIAL = 130; // Frames entre obstáculos
