@@ -171,7 +171,7 @@ function spawnObstacle() {
     let obstacleHeight, yPos;
     let isScoringEvent = true; // Por defecto, cada spawn event da puntos
 
-    if (patternType < 0.55) { // 55% chance: Par clásico (arriba y abajo)
+    if (patternType < 0.35) { // 35% chance: Par clásico (arriba y abajo)
         const availableHeight = canvas.height - OBSTACLE_GAP_PAIR;
         const topHeight = Math.random() * (Math.min(OBSTACLE_MAX_HEIGHT, availableHeight) - OBSTACLE_MIN_HEIGHT) + OBSTACLE_MIN_HEIGHT;
         const bottomHeight = canvas.height - topHeight - OBSTACLE_GAP_PAIR;
@@ -185,14 +185,14 @@ function spawnObstacle() {
             image: obstacleImg, type: 'bottom', scored: false, isScoringObstacle: true, isPartOfPair: true
         });
 
-    } else if (patternType < 0.75) { // 20% chance: Solo obstáculo superior
+    } else if (patternType < 0.65) { // 30% chance: Solo obstáculo superior
         obstacleHeight = Math.random() * (OBSTACLE_MAX_HEIGHT - OBSTACLE_MIN_HEIGHT) + OBSTACLE_MIN_HEIGHT;
         obstacles.push({
             x: canvas.width, y: 0, width: OBSTACLE_WIDTH, height: obstacleHeight,
             image: obstacleImg, type: 'top_single', scored: false, isScoringObstacle: true
         });
 
-    } else if (patternType < 0.95) { // 20% chance: Solo obstáculo inferior
+    } else if (patternType < 0.95) { // 30% chance: Solo obstáculo inferior
         obstacleHeight = Math.random() * (OBSTACLE_MAX_HEIGHT - OBSTACLE_MIN_HEIGHT) + OBSTACLE_MIN_HEIGHT;
         obstacles.push({
             x: canvas.width, y: canvas.height - obstacleHeight, width: OBSTACLE_WIDTH, height: obstacleHeight,
