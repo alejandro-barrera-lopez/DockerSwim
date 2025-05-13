@@ -53,20 +53,20 @@ canvas {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.message-box h2 {
+.message-box h1, h2 {
     margin-top: 0;
     color: #00354e;
 }
 
 .message-box button {
-     padding: 10px 25px;
-     font-size: 1em;
-     cursor: pointer;
-     background-color: #0077b6;
-     color: white;
-     border: none;
-     border-radius: 5px;
-     margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .message-box button:hover {
@@ -75,4 +75,10 @@ canvas {
 
 .hidden {
     display: none;
+}
+
+#start-screen .message-box p {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #555;
 }

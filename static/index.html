@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Whale Runner</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 <body>
-    <div class="game-container">
-        <h1>Whale Runner</h1>
-        <canvas id="gameCanvas" width="800" height="300">Tu navegador no soporta Canvas.</canvas>
+    <div id="start-screen" class="overlay">
+        <div class="message-box">
+            <h1>Whale Runner</h1>
+            <p>Pulsa espacio / Toca la pantalla para nadar arriba</p>
+            <button id="startButton">Iniciar Juego</button>
+        </div>
+    </div>
+
+    <div class="game-container" style="display: none;">
+        <h1>Whale Runner</h1> <canvas id="gameCanvas" width="800" height="300">Tu navegador no soporta Canvas.</canvas>
         <div id="score">Puntuación: 0</div>
-        <div id="instructions">Pulsa Espacio / Toca la pantalla para Nadar Arriba</div>
-        <div id="gameOver" class="overlay hidden">
+        <div id="instructions" style="display: none;">Pulsa espacio / Toca la pantalla para nadar arriba</div> <div id="gameOver" class="overlay hidden">
             <div class="message-box">
-                <h2>¡Fin del Juego!</h2>
-                <p>Puntuación Final: <span id="finalScore">0</span></p>
+                <h2>¡Fin del juego!</h2>
+                <p>Puntuación final: <span id="finalScore">0</span></p>
                 <button id="restartButton">Reiniciar</button>
             </div>
         </div>
